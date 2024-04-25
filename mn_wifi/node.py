@@ -34,8 +34,8 @@ from mininet.util import (errRun, errFail, Python3, getincrementaldecoder,
 from mininet.node import Node, UserSwitch, OVSSwitch, CPULimitedHost
 from mininet.moduledeps import pathCheck
 from mininet.link import Intf
-from mn_wifi.link import WirelessIntf, physicalMesh, ITSLink
-from mn_wifi.wmediumdConnector import w_server, w_pos, w_cst, wmediumd_mode
+from mininetwifi.mn_wifi.link import WirelessIntf, physicalMesh, ITSLink
+from mininetwifi.mn_wifi.wmediumdConnector import w_server, w_pos, w_cst, wmediumd_mode
 
 from re import findall
 
@@ -136,7 +136,7 @@ class Node_wifi(Node):
 
     def configLinks(self):
         "Applies channel params and handover"
-        from mn_wifi.mobility import ConfigMobLinks
+        from mininetwifi.mn_wifi.mobility import ConfigMobLinks
         ConfigMobLinks(self)
 
     def configIFB(self, wlan, ifbID):
@@ -257,7 +257,7 @@ class Node_wifi(Node):
         return x, y, z
 
     def update_3d(self):
-        from mn_wifi.plot import Plot3D
+        from mininetwifi.mn_wifi.plot import Plot3D
         self.plt_node.remove()
         self.circle.remove()
         self.plttxt.remove()

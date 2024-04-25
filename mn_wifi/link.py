@@ -14,13 +14,13 @@ from subprocess import check_output as co, CalledProcessError
 from mininet.link import Intf, TCIntf, Link
 from mininet.log import error, debug, info
 
-from mn_wifi.devices import DeviceRate
-from mn_wifi.manetRoutingProtocols import manetProtocols
-from mn_wifi.propagationModels import SetSignalRange, GetPowerGivenRange
-from mn_wifi.wmediumdConnector import DynamicIntfRef, \
+from mininetwifi.mn_wifi.devices import DeviceRate
+from mininetwifi.mn_wifi.manetRoutingProtocols import manetProtocols
+from mininetwifi.mn_wifi.propagationModels import SetSignalRange, GetPowerGivenRange
+from mininetwifi.mn_wifi.wmediumdConnector import DynamicIntfRef, \
     WStarter, SNRLink, w_pos, w_cst, w_server, ERRPROBLink, \
     wmediumd_mode, w_txpower, w_gain, w_height, w_medium
-from mn_wifi.frequency import Frequency as Getfreq
+from mininetwifi.mn_wifi.frequency import Frequency as Getfreq
 
 
 class IntfWireless(Intf):
